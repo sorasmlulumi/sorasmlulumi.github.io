@@ -6,24 +6,63 @@
 -->
 <html>
 	<head>
-		<title>Sorsia Muttarak, M.Sc. — Profile</title>
-		<meta name="description" content="Ms. Sorsia Muttarak, M.Sc. — Quality Assurance & Risk Management Nurse at Bangkok Hospital Phuket. Interests: nutrition, healthcare risk management, JCI/HA compliance, data analysis.">
+		<title>Big Picture by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Profile headshot: fixed square with cover crop and responsive fallback */
+			.profile-headshot {
+				/* kept for backward compatibility if an <img> is used */
+				width: 220px !important;
+				height: 220px !important;
+				object-fit: cover;
+				border-radius: 6px;
+				display: block;
+				position: relative;
+				z-index: 2;
+			}
+			/* Background-image variant: use the top portion of the photo as a cover-cropped block */
+			.profile-headshot-bg {
+				width: 220px;
+				height: 220px;
+				/* background-image is set inline for reliability */
+				background-position: top center;
+				background-size: cover;
+				border-radius: 6px;
+				display: block;
+				position: relative;
+				z-index: 2;
+			}
+			/* Disable the template overlay pseudo-element for the headshot block */
+			.image.profile-headshot-bg:before { display: none !important; }
+			@media screen and (max-width: 736px) {
+				.profile-headshot, .profile-headshot-bg { width: 140px; height: 140px; }
+			}
+			/* Prevent broader `.image img` rules from overriding the headshot sizing */
+			.image img.profile-headshot { width: auto !important; height: auto !important; }
+			@media screen and (max-width: 736px) {
+				.profile-headshot { width: 140px; height: 140px; }
+			}
+			/* Ensure the image container doesn't break layout and allow z-index stacking */
+			.image.left { float: left; margin-right: 1.5rem; position: relative; }
+		</style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
-				<h1>Ms. Sorsia Muttarak, M.Sc.</h1>
+				<h1>Sorsia Muttarak, M.Sc.</h1>
 				<nav>
 					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#education">Education</a></li>
-						<li><a href="#work">Experience</a></li>
+						<li><a href="#intro">About</a></li>
+						<li><a href="#one">Education</a></li>
+						<li><a href="#two">Experience</a></li>
+						<li><a href="#work">Research & Publications</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#honors">Honors</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -33,128 +72,146 @@
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2>Ms. Sorsia Muttarak, M.Sc.</h2>
+						<h2>About</h2>
 					</header>
-					<p>Quality Assurance Nurse | Risk Management Nurse | Registered Nurse (Ophthalmology)<br />
+					<div class="image left profile-headshot-bg" role="img" aria-label="Sorsia Muttarak" style="background-image: url('images/headshot.jpg');"></div>
+					<p>Ms. Sorsia Muttarak, M.Sc.<br>
+					Quality Assurance Nurse | Risk Management Nurse | Registered Nurse (Ophthalmology)<br>
 					Bangkok Hospital Phuket</p>
+					<p>Her professional interests include nutrition, healthcare risk management, and hospital quality standards (JCI and HA). She specializes in data analysis, risk management, document control, and applied nutritional science.</p>
 					<footer>
-						<a href="#about" class="button style2 down">About</a>
+						<a href="#one" class="button style2 down">Read Education</a>
 					</footer>
 				</div>
 			</section>
 
-		<!-- About -->
-			<section id="about" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>About</h2>
-					</header>
-					<p>Ms. Sorsia Muttarak, M.Sc. is a Quality Assurance Nurse and Risk Management Nurse at Bangkok Hospital Phuket. Her professional interests include nutrition, healthcare risk management, and hospital quality standards (JCI and HA). She specializes in data analysis, risk management, document control, and applied nutritional science.</p>
-				</div>
-				<a href="#education" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- Education & Experience -->
-			<section id="education" class="main style2 left dark fullscreen">
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
 				<div class="content box style2">
 					<header>
 						<h2>Education</h2>
 					</header>
-					<p><strong>Master of Science (Nutrition)</strong><br />
-					Joint Program: Faculty of Medicine, Ramathibodi Hospital and Institute of Nutrition, Mahidol University (2018–2022)<br />
+					<h3>Master of Science (Nutrition)</h3>
+					<p>Joint Program: Faculty of Medicine, Ramathibodi Hospital and Institute of Nutrition, Mahidol University (2018–2022)<br>
 					Thesis: “Coffee Consumption Patterns, Metabolic Factors and the Risk of Hypertension Related to Obesity”</p>
-					<p><strong>Bachelor of Nursing Science</strong><br />
-					Faculty of Nursing, Mahidol University</p>
-					<p><strong>Certificate in Ophthalmic Nursing</strong><br />
-					Faculty of Medicine, Siriraj Hospital, Mahidol University</p>
+					<h3>Bachelor of Nursing Science</h3>
+					<p>Faculty of Nursing, Mahidol University</p>
+					<h3>Certificate</h3>
+					<p>Certificate in Ophthalmic Nursing — Faculty of Medicine, Siriraj Hospital, Mahidol University</p>
 				</div>
-				<a href="#experience" class="button style2 down anchored">Next</a>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Professional Experience</h2>
+					</header>
+					<h3>Quality Assurance Nurse</h3>
+					<p>Bangkok Hospital Phuket (January 2025 – Present)</p>
+					<ul>
+						<li>Responsible for compliance with Joint Commission International (JCI) and Healthcare Accreditation (HA) standards.</li>
+						<li>Document control, internal survey coordination, and reporting to the hospital quality committee.</li>
+					</ul>
+					<h3>Risk Management Nurse</h3>
+					<p>Bangkok Hospital Phuket (2018–2024, 6 years)</p>
+					<ul>
+						<li>Managed patient complaints and incident reports.</li>
+						<li>Conducted data analysis on risk severity levels.</li>
+						<li>Coordinated fact-checking and investigations with multidisciplinary teams.</li>
+					</ul>
+					<h3>Registered Nurse (Ophthalmology)</h3>
+					<p>Bangkok Hospital Phuket (2016–2018, 2 years); Siriraj Hospital, Bangkok (2014–2016, 2 years)</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Work -->
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header>
-						<h2>Professional Experience</h2>
-						<p><strong>Quality Assurance Nurse</strong><br />
-						Bangkok Hospital Phuket (January 2025 – Present)<br />
-						Responsible for compliance with Joint Commission International (JCI) and Healthcare Accreditation (HA) standards; document control, internal survey coordination, and reporting to the hospital quality committee.</p>
-						<p><strong>Risk Management Nurse</strong><br />
-						Bangkok Hospital Phuket (2018–2024, 6 years)<br />
-						Managed patient complaints and incident reports; conducted data analysis on risk severity levels; coordinated fact-checking and investigations with multidisciplinary teams.</p>
-						<p><strong>Registered Nurse (Ophthalmology)</strong><br />
-						Bangkok Hospital Phuket (2016–2018, 2 years)<br />
-						Siriraj Hospital, Bangkok (2014–2016, 2 years)</p>
+						<h2>Research & Publications</h2>
+						<p>Research interests include nutrition and dietary behavior, metabolic risk factors and NCDs, healthcare risk management, and applications of data analytics in hospital performance and patient safety.</p>
 					</header>
-
-				<!-- Research & Publications -->
-				<section id="research" class="box">
-					<header>
-						<h3>Research Interests</h3>
-					</header>
-					<p>Nutrition and dietary behavior; metabolic risk factors and non-communicable diseases (NCDs); healthcare risk management and quality improvement; applications of data analytics in hospital performance and patient safety.</p>
-					<header>
-						<h3>Publications</h3>
-					</header>
-					<p>Muttarak, S., Malilas, W., Panpunuan, P., Sritara, P., & Sirivarasai, J. (2023). Coffee Consumption Patterns, Metabolic Factors and The Risk of Hypertension Related to Obesity. Journal of Nutrition Association of Thailand (Online), 58(1), 107–121. Read more on the <a href="publications.html">Publications</a> page or retrieve the article from <a href="https://he01.tci-thaijo.org/index.php/JNAT/article/view/263911" target="_blank" rel="noopener">TCI ThaiJo</a> (Thai)</p>
-				</section>
-
-				<!-- Gallery  -->
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
-						</div>
-
+					<h3>Research Interests</h3>
+					<ul>
+						<li>Nutrition and dietary behavior</li>
+						<li>Metabolic risk factors and non-communicable diseases (NCDs)</li>
+						<li>Healthcare risk management and quality improvement</li>
+						<li>Applications of data analytics in hospital performance and patient safety</li>
+					</ul>
+					<h3>Selected Publication</h3>
+					<p>Muttarak, S., Malilas, W., Panpunuan, P., Sritara, P., &amp; Sirivarasai, J. (2023). Coffee Consumption Patterns, Metabolic Factors and The Risk of Hypertension Related to Obesity. <em>Journal of Nutrition Association of Thailand (Online)</em>, 58(1), 107–121. (<em>Thai</em>) — <a href="https://he01.tci-thaijo.org/index.php/JNAT/article/view/263911" target="_blank" rel="noopener">Full text (TCI)</a></p>
 				</div>
 			</section>
 
-		<!-- Skills, Honors & Contact -->
+			<section id="skills" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Skills</h2>
+					</header>
+					<ul>
+						<li>Data Analysis (Power BI, Microsoft Office 365, ChatGPT)</li>
+						<li>Canva (document and presentation design)</li>
+						<li>Healthcare risk management and quality assurance (JCI, HA)</li>
+						<li>Languages: Thai, English</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="honors" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Honors & Academic Service</h2>
+					</header>
+					<ul>
+						<li>Active contribution to Joint Commission International (JCI) accreditation activities at Bangkok Hospital Phuket.</li>
+						<li>Participation in Healthcare Accreditation (HA, Thailand) compliance and quality improvement initiatives.</li>
+						<li>Supported preparation of documents and data for Internal Surveys, Leadership Walkrounds, and Quality Assessments.</li>
+						<li>Collaborated with multidisciplinary teams to improve patient safety and healthcare service quality.</li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2>Profile & Contact</h2>
-						<p>Selected skills, academic service, and contact information.</p>
+						<h2>Contact</h2>
+						<p>Feel free to reach out by email or phone. For professional inquiries, please use the address below.</p>
 					</header>
 					<div class="box">
-						<h3>Skills</h3>
-						<ul>
-							<li>Data Analysis (Power BI, Microsoft Office 365, ChatGPT)</li>
-							<li>Canva (document and presentation design)</li>
-							<li>Healthcare risk management and quality assurance (JCI, HA)</li>
-							<li>Languages: Thai, English</li>
-						</ul>
-						<h3>Honors & Academic Service</h3>
-						<ul>
-							<li>Active contribution to Joint Commission International (JCI) accreditation activities at Bangkok Hospital Phuket</li>
-							<li>Participation in Healthcare Accreditation (HA, Thailand) compliance and quality improvement initiatives</li>
-							<li>Supported preparation of documents and data for Internal Surveys, Leadership Walkrounds, and Quality Assessments</li>
-							<li>Collaborated with multidisciplinary teams to improve patient safety and healthcare service quality</li>
-						</ul>
-						<h3>Contact</h3>
-						<p>Email: <a href="mailto:sorsia8@hotmail.com">sorsia8@hotmail.com</a><br />
-						Email: <a href="mailto:sorsia.mu8@gmail.com">sorsia.mu8@gmail.com</a><br />
-						Phone: +66 84 661 8444</p>
-						<address>
-						97/11 Moo 8, Thepkasattri Road<br />
-						Srisoonthorn Subdistrict, Thalang District<br />
-						Phuket 83110, Thailand
-						</address>
+						<div class="row">
+							<div class="6u">
+								<h3>Direct contact</h3>
+								<ul class="contact">
+									<li>Email: <a href="mailto:sorsia8@hotmail.com">sorsia8@hotmail.com</a></li>
+									<li>Email: <a href="mailto:sorsia.mu8@gmail.com">sorsia.mu8@gmail.com</a></li>
+									<li>Phone: <a href="tel:+66846618444">+66 84 661 8444</a></li>
+								</ul>
+							</div>
+							<div class="6u">
+								<h3>Address</h3>
+								<address>
+								97/11 Moo 8, Thepkasattri Road<br>
+								Srisoonthorn Subdistrict, Thalang District<br>
+								Phuket 83110, Thailand
+								</address>
+							</div>
+						</div>
+						<hr />
+						<!-- keep visitor contact form -->
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -174,7 +231,7 @@
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; 2025 Ms. Sorsia Muttarak</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</footer>
